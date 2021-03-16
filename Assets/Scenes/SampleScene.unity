@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 836923976}
   - component: {fileID: 836923975}
   - component: {fileID: 836923974}
+  - component: {fileID: 836923977}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -392,7 +393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 836923975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 836923977}
+        m_TargetAssemblyTypeName: JumpScript, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &836923975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +444,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836923972}
   m_CullTransparentMesh: 0
+--- !u!114 &836923977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836923972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5cd000550474ed49a7d5368df1e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 855402035}
 --- !u!1 &855402035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1605737292714392685, guid: a208054e2a5a84f2db49bc5ca9fe06d1, type: 3}
@@ -462,7 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
   m_StationaryTurnSpeed: 180
-  m_JumpPower: 12
+  m_JumpPower: 7
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
   m_MoveSpeedMultiplier: 1
